@@ -31,7 +31,7 @@ export default function Board() {
     if (winner) {
       return (
         <div>
-          <span className="block text-center font-extrabold text-3xl">Winner is: 
+          <span className="block text-center font-extrabold text-3xl tracking-wider">Winner is: 
             <span className={`${color}`}> {winner} </span>
           </span>
         </div>
@@ -40,13 +40,13 @@ export default function Board() {
     // 9 moves done, its a draw
     else if(!winner && history.length === 9) {
         return <div>
-          <span className="block text-center font-extrabold text-3xl"> It's a draw! </span>
+          <span className="block text-center font-extrabold text-3xl tracking-wider"> It's a draw! </span>
         </div>
     } 
     else {
       return (
         <div>
-          <span className="block text-center p-3 text-xl font-extrabold">
+          <span className="block text-center p-3 text-xl font-extrabold tracking-wider">
             Next player is: <div className={`animate-bounce text-black font-extrabold ${nextPlayerColor}`}> {xturn ? "X" : "O"} </div>
           </span>
           <div className="grid grid-cols-3 mx-auto w-64 border-black border-solid border-2">
